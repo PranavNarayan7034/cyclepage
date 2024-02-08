@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    text-decoration: none;
+    box-sizing: border-box;}
+.mynav{
+    height: 10vh;
+    /* background-color: yellow; */
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
+.logo{
+    height:40px;
+    width: 40px;}
+.link{
+    text-decoration: none;
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 20px;
+    color: rgba(0, 0, 0, 0.582);}
+.link.active{
+    color: black;}
+.navicon{
+    height: 20px;
+    width: 20px;
+    margin: 0 20px;}
+.link::after{
+    content: "";
+    height: 5px;
+    width: 0;
+    background-color: greenyellow;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    border-radius: 15px;
+    transition: 0.5s;}
+.link.active::after{
+    width: 100%;}
+.link:hover::after{
+    width: 100%;}
+.menu{
+    height: 30px;
+    width: 30px;
+    color: rgba(0, 0, 0, 0.426);
+    display: none;
+}
+#close{
+    height: 35px;
+    width: 35px;
+    color: rgba(0, 0, 0, 0.426);
+    display: none;
+}
+
+.resp-navitems{
+    /* height: 300px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.resp-navitems a, .resp-navitems ion-icon{
+    margin: 15px 0;
+}
+
+@keyframes nav{
+    0%{
+        transform: translateX(70%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width:778px){
+    .navitems{
+        display: none;
+    }
+    .menu{
+        display: inline;
+    }
+    .resp-navitems.toggle{
+        display: flex;
+        animation: nav 0.5s linear;
+    }
+    .mynav.toggle .menu{
+        display: none;
+    }
+    .mynav.toggle #close{
+        display: inline;
+    }
+}
+
+/* ............................... */
+
+.cols{
+    /* height: 500px; */
+    /* border: 3px solid; */
+}
+
+.landinghead{
+    font-family: Protest Strike;
+    font-size: 80px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.landinghead span{
+    font-weight: 800;
+    color: rgba(0, 128, 0, 0.815);
+}
+.contents{
+    padding:65px 55px;
+    animation: landing 0.5s ease-in;
+    /* text-align: center; */
+} 
+
+.contents button{
+    padding: 10px 50px;
+    border: 3px solid transparent;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    position: relative;
+    border-radius: 15px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+.contents button ion-icon{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    margin-left: 15px;
+}
+@keyframes landing{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}

@@ -152,7 +152,9 @@
         transform: translateX(0%);
     }
 }
-
+.cols{
+    display: flex;
+}
 .imgdiv{
     position: relative;
     height: 100%;
@@ -164,10 +166,66 @@
     position: absolute;
     height: 400px;
    transform: rotate(20deg);
-   opacity: 0.5;
+   opacity: 0.2;
+   /* animation: trirotate 5s linear infinite; */
 }
 .cycle{
     position: relative;
     height: 600px;
     width: 600px;
+    filter: drop-shadow(10px 10px 10px black);
+    transition: 1s;
+}
+.sports{
+    /* height: 60%; */
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.sports div{
+    width: 100%;
+    transform: rotate(270deg);
+    background-color: blue;
+}
+.sports span{
+    font-size: 90px;
+    font-weight: 800;
+    font-family: Protest Strike;
+    color: rgba(0, 0, 0, 0.516);
+    opacity: 0.2;
+}
+.cycle:hover{
+    transform: scale(1.1,1.1);
+}
+
+@keyframes trirotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    33%{
+        transform: rotate(100deg);
+    }
+    66%{
+        transform: rotate(200deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.new{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.new img{
+    margin: 0 20px;
+    /* height: 100px; */
+    width: 100px;
+}
+.new ion-icon{
+    height: 50px;
+    width: 50px;
 }

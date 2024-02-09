@@ -100,6 +100,7 @@
 /* ............................... */
 
 .cols{
+    position: relative;
     /* height: 500px; */
     /* border: 3px solid; */
 }
@@ -130,12 +131,18 @@
     border-radius: 15px;
     font-weight: 600;
     margin-top: 25px;
+    transition: 0.5s;
 }
 .contents button ion-icon{
     position: absolute;
     height: 25px;
     width: 25px;
     margin-left: 15px;
+}
+.contents button:hover{
+    border: 3px solid black;
+    color: black;
+    background-color: transparent;
 }
 @keyframes landing{
     0%{
@@ -144,4 +151,23 @@
     100%{
         transform: translateX(0%);
     }
+}
+
+.imgdiv{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.triangle{
+    position: absolute;
+    height: 400px;
+   transform: rotate(20deg);
+   opacity: 0.5;
+}
+.cycle{
+    position: relative;
+    height: 600px;
+    width: 600px;
 }
